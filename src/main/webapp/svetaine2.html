@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geriausi 2023 metu siaubo filmai</title>
+    <style>
+
+        body{
+
+            background: linear-gradient(to left, rgb(130, 123, 2), rgb(87, 124, 157));
+        }
+        .div1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .ieskotiButton{
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+        .atsijungtiButton{
+            border-radius: 10px;
+            border: none;
+            border-bottom:2px solid black;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+
+
+        .ieskotiFilmu{
+
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .div2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .pasirinkti{
+            border: none;
+            border-bottom:2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        .ieskotiInput
+        {
+            border: none;
+            border-bottom:2px solid black;
+            border-radius: 10px;
+            outline: none;
+            padding: 10px;
+        }
+        .pasirinktiButton{
+            border: none;
+            border-bottom:2px solid black;
+            border-radius: 10px;
+            outline: none;
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .filmuPav{
+
+            margin-top: 10px;
+            color: white;
+            background: linear-gradient(to right, rgb(130, 123, 2), rgb(87, 124, 157));
+            border-image: linear-gradient(to right, rgb(18, 8, 21), rgba(122, 47, 0, 0.82)) 1;
+            border-width: 4px;
+            border-style: solid;
+
+        }
+        .table{
+            margin-left: 10px;
+            text-align: left;
+        }
+        .span1{
+            animation: color-text 0.7s infinite;
+        }
+
+        @keyframes color-text {
+            50% { color: rgb(255, 30, 1); }
+            75% { color: rgb(255, 225, 0); }
+            100% { color: rgb(255, 0, 0)}
+        }
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="name-user">
+        <h1><u>Sveiki, Vardas478</u></h1>
+    </div>
+
+    <div class="ieskotiFilmu"><input id="inputFilmas" class="ieskotiInput" placeholder="Ieskoti filmu" type="text"></div>
+    <div class="btn1"><button onclick="tikrintis()" id="tikrintiButton" class="ieskotiButton"><strong>Ieskoti</strong></button></div>
+    <div class="btn2"><button onclick="atsijungti()" class="atsijungtiButton"><strong>Atsijungti</strong></button> </div>
+
+</div>
+
+<div class="div2">
+    <select class="pasirinkti" id="filmai2023">
+        <option id="TalkToMe2" value="TalkToMe" selected>Talk to Me</option>
+        <option id="SawX2" value="SawX" >Saw X</option>
+        <option id="EvilDeadRise2" value="EvilDeadRise" >Evil Dead Rise</option>
+
+    </select>
+
+    <button onclick="Pasirinkti()" id="PasirinktiButton" type="submit" class="pasirinktiButton"><strong>Pasirinkti</strong> </button></button>
+
+
+    <div class="filmuPav">
+        <p><strong>Top 5 Geriausiu 2023 metu siaubo filmu(is imdb) </strong></p>
+        <table class="table" id="addFilmai">
+            <tr id="tr1">
+                <th>
+                    <span class="span1" style="color: gold">TOP 1</span> Talk to me su 8.4 reitingu
+                </th>
+            </tr>
+            <tr id="tr2">
+                <th>
+                    <span class="span1" style="color: gold">TOP 2</span> Saw X su 7.6 reitingu
+                </th>
+            </tr>
+            <tr id="tr3">
+                <th>
+                    <span class="span1" style="color: gold">TOP 3</span> Evil Dead Rise su 7.4 reitingu
+                </th>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+
+
+</div>
+<script>
+
+    function tikrintis (){
+
+        const Filmas = document.getElementById('inputFilmas').value;
+        const mgtk = document.getElementById('tikrintiButton').value;
+
+        if (Filmas == "Talk to me" || Filmas == "talk to me"){
+            window.location = "TalkToMe.html";
+            return false;
+        }
+        else if (Filmas == "Saw X" || Filmas == "saw x"){
+            window.location = "SawX.html";
+            return false;
+        }
+        else  if (Filmas == "Evil Dead Rise" || Filmas == "evil dead rise"){
+            window.location = "EvilDeadRise.html";
+            return false;
+        }
+
+
+        else {
+            alert('Tokio filmo nera!')
+        }
+    }
+
+    function Pasirinkti (){
+        const TalkToMe = document.getElementById('TalktoMe2');
+        const SawX = document.getElementById('SawX2');
+        const EvilDeadRise = document.getElementById('EvilDeadRise2');
+
+
+        if (TalkToMe.selected){
+            window.location = "TalkToMe.html";
+        }
+        else if (SawX.selected){
+            window.location = "SawX.html";
+
+        }
+        else if (EvilDeadRise.selected){
+            window.location = "EvilDeadRise.html";
+        }
+
+        else {alert("Nepasirinkote filmo")}
+
+    }
+
+    function atsijungti() {
+        window.location = "svetaine.html";
+
+    }
+</script>
+</div>
+</body>
+</html>

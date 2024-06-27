@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talk To Me</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Me</title>
+    <style>
+        body {
+
+
+
+            background: rgb(0,0,0);
+            background: linear-gradient(to right, rgb(130, 123, 2), rgb(87, 124, 157));
+
+            margin: 0;
+            background-attachment: fixed;
+            animation: gradient-bg 1s ease infinite;
+
+
+        }
+
+
+
+
+
+
+
+        .table {
+            text-align: left;
+            border-top: 2px solid rgb(255, 255, 255);
+            border-bottom: 2px solid rgb(255, 255, 255);
+            margin-bottom: 1px;
+        }
+
+        .mygtukas {
+
+            height: 30px;
+            cursor: pointer;
+            border: none;
+            background-color: white;
+        }
+
+        .mygtukas:active {
+            background-color: rgb(36, 35, 35);
+        }
+
+        div {
+            color:black
+        }
+
+        textarea {
+            resize: none;
+        }
+        .ziuretimgt {
+            border-radius: 10px;
+
+            height: 30px;
+            width: 120px;
+            border-color:white;
+            background-color: transparent
+
+
+
+        }
+
+        .ziuretiMigtk
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ziuretimgtA {
+            animation: color-text 1s infinite;
+            text-decoration: none;
+
+        }
+
+        @keyframes color-text {
+            0% { color: red; }
+            50% { color: yellow; }
+            100% { color: red; }
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div>
+
+    <h1  style="; text-align: center;">Talk to Me</h1> <br>
+    <div class="ziuretiMigtk">
+        <button class="ziuretimgt"><a target="_blank" class="ziuretimgtA" href="https://a24films.com/films/talktome"> Ziureti filma </a></button>
+    </div>
+    <p>Filmo kategorija: Siaubo, Trileris </p>
+    <p>Kai grupė draugų atranda,
+        kaip užburti dvasias naudojant balzamuotą ranką,
+        juos užkabina naujas jaudulys,
+        kol vienas iš jų nueina per toli ir išlaisvina bauginančias antgamtines jėgas.</p>
+    <p> <strong><a target="_blank" style="font-size: 20px; color: rgb(255, 0, 0);text-decoration: none;" href="https://en.wikipedia.org/wiki/Talk_to_Me_(2022_film)"> &#8594 Daugiau informacijos rasite cia &#8592 </a> </strong> </p>
+    <table class="table">
+        <tr>
+            <th>Filmo režisieriai:</th>
+            <th> Danny Philippou 	&#183;</th>
+            <th>Michael Philippou 	&#183;</th>
+        </tr>
+
+        <tr>
+            <th>Filmo žvaigždės:</th>
+            <th>Sophie Wilde	&#183;</th>
+            <th>Joe Bird	&#183;</th>
+            <th>Alexandra Jensen &#183; </th>
+            <th>Otis Dhanji &#183; </th>
+
+        </tr>
+    </table>
+
+</div>
+
+<div>
+
+    <iframe width="500" height="360" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFHgPKj6Vf1AeWq5l7IU2Agq8FqQprV3cHw&s">
+    </iframe>
+</div>
+
+<div>
+    <button class="mygtukas" onclick="atgal()" id="btn">Atgal į pagrindinį puslapį</button>
+    <button class="mygtukas" onclick="ankstesnis()" id="btn3">&lt;&lt;</button>
+    <button class="mygtukas" onclick="kitas()" id="btn4">&egs;&egs;</button>
+
+
+</div>
+
+<div>
+    <p>Filmo ivertinimas: 8.4/10(imdb) </p>
+</div>
+
+<div class="atsiliepimai">
+    <p style="font-size: 30px; ">Komentaru skiltis</p>
+    <input id="inputVardas" placeholder="Vardas" type="text"> <br>
+    <textarea name="komentaras" id="kmt" cols="30" rows="3" maxlength="90"  placeholder="Komentaras"></textarea> <br>
+    <button onclick="komentaras()" id="skelbtiBtn">Paskelbti</button>
+    <p style="color:white" id="komentarai"></p>
+</div>
+
+<script>
+
+    function atgal() {
+
+        const mgtk = document.getElementById('btn')
+        window.location = "svetaine2.html";
+
+    }
+
+
+    function ankstesnis() {
+        const mgtk = document.getElementById('btn3')
+        window.location = "EvilDeadRise.html";
+    }
+
+    function kitas() {
+        const mgtk = document.getElementById('btn4')
+        window.location = "SawX.html";
+    }
+
+    function komentaras() {
+        const Vardas = document.getElementById('inputVardas').value;
+        const kmt = document.getElementById('kmt').value;
+
+
+        document.getElementById('komentarai').innerHTML = Vardas + ": " + kmt;
+
+        if(Vardas == "" && kmt == "") {
+            alert('Jus neivedete savo vardo arba pakomentavote tuscia komentara!')
+            document.getElementById('komentarai').innerHTML = ""
+        }
+        else if(Vardas == "" || kmt == "") {
+            alert('Jus neivedete savo vardo arba pakomentavote tuscia komentara!')
+            document.getElementById('komentarai').innerHTML = ""
+        }
+
+
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>
+</body>
+</html>

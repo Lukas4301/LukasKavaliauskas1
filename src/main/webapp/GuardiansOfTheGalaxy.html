@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guardians of the Galaxy Vol. 3</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Me</title>
+    <style>
+        body {
+
+
+
+            background: rgb(0,0,0);
+            background: linear-gradient(to right, rgb(130, 123, 2), rgb(87, 124, 157));
+
+            margin: 0;
+            background-attachment: fixed;
+            animation: gradient-bg 1s ease infinite;
+
+
+        }
+
+
+
+
+
+
+
+        .table {
+            text-align: left;
+            border-top: 2px solid rgb(255, 255, 255);
+            border-bottom: 2px solid rgb(255, 255, 255);
+            margin-bottom: 1px;
+        }
+
+        .mygtukas {
+
+            height: 30px;
+            cursor: pointer;
+            border: none;
+            background-color: white;
+        }
+
+        .mygtukas:active {
+            background-color: rgb(36, 35, 35);
+        }
+
+        div {
+            color:black
+        }
+
+        textarea {
+            resize: none;
+        }
+        .ziuretimgt {
+            border-radius: 10px;
+
+            height: 30px;
+            width: 120px;
+            border-color:white;
+            background-color: transparent
+
+
+
+        }
+
+        .ziuretiMigtk
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ziuretimgtA {
+            animation: color-text 1s infinite;
+            text-decoration: none;
+
+        }
+
+        @keyframes color-text {
+            0% { color: red; }
+            50% { color: yellow; }
+            100% { color: red; }
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div>
+
+    <h1  style="; text-align: center;">Guardians of the Galaxy Vol. 3 </h1> <br>
+    <div class="ziuretiMigtk">
+        <button class="ziuretimgt"><a target="_blank" class="ziuretimgtA" href="https://www.primevideo.com/detail/John-Wick-Chapter-4/0OPU861X5ZA4ETQFV906HPCQ1T"> Ziureti filma </a></button>
+    </div>
+    <p>Filmo kategorija: Veiksmo </p>
+    <p>Savo naujoje būstinėje "Knowhere" Galaktikos sergėtojus užpuola Adamas
+        suverenus karys, kurį sukūrė aukštoji kunigaikštienė Ayesha,
+        kuris siekia juos sunaikinti už tai, kad pavogė iš jos.</p>
+    <p> <strong><a target="_blank" style="font-size: 20px; color: rgb(255, 0, 0);text-decoration: none;" href="https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_Vol._3"> &#8594 Daugiau informacijos rasite cia &#8592 </a> </strong> </p>
+    <table class="table">
+        <tr>
+            <th>Filmo režisieriai:</th>
+            <th> James Gunn 	&#183;</th>
+        </tr>
+
+        <tr>
+            <th>Filmo žvaigždės:</th>
+            <th>Chris Pratt	&#183;</th>
+            <th> Zoe Saldaña&#183;</th>
+            <th>Karen Gillan &#183; </th>
+
+        </tr>
+    </table>
+
+</div>
+
+<div>
+
+    <iframe width="500" height="360" src="https://upload.wikimedia.org/wikipedia/en/7/74/Guardians_of_the_Galaxy_Vol._3_poster.jpg">
+    </iframe>
+</div>
+
+<div>
+    <button class="mygtukas" onclick="atgal()" id="btn">Atgal į pagrindinį puslapį</button>
+    <button class="mygtukas" onclick="ankstesnis()" id="btn3">&lt;&lt;</button>
+    <button class="mygtukas" onclick="kitas()" id="btn4">&egs;&egs;</button>
+
+
+</div>
+
+<div>
+    <p>Filmo ivertinimas: 7.4/10(imdb) </p>
+</div>
+
+<div class="atsiliepimai">
+    <p style="font-size: 30px; ">Komentaru skiltis</p>
+    <input id="inputVardas" placeholder="Vardas" type="text"> <br>
+    <textarea name="komentaras" id="kmt" cols="30" rows="3" maxlength="90"  placeholder="Komentaras"></textarea> <br>
+    <button onclick="komentaras()" id="skelbtiBtn">Paskelbti</button>
+    <p style="color:white" id="komentarai"></p>
+</div>
+
+<script>
+
+    function atgal() {
+
+        const mgtk = document.getElementById('btn')
+        window.location = "svetaine2Veiksmo.html";
+
+    }
+
+
+    function ankstesnis() {
+        const mgtk = document.getElementById('btn3')
+        window.location = "JohnWick.html";
+    }
+
+    function kitas() {
+        const mgtk = document.getElementById('btn4')
+        window.location = "GodzillaMinusOne.html";
+    }
+
+    function komentaras() {
+        const Vardas = document.getElementById('inputVardas').value;
+        const kmt = document.getElementById('kmt').value;
+
+
+        document.getElementById('komentarai').innerHTML = Vardas + ": " + kmt;
+
+        if(Vardas == "" && kmt == "") {
+            alert('Jus neivedete savo vardo arba pakomentavote tuscia komentara!')
+            document.getElementById('komentarai').innerHTML = ""
+        }
+        else if(Vardas == "" || kmt == "") {
+            alert('Jus neivedete savo vardo arba pakomentavote tuscia komentara!')
+            document.getElementById('komentarai').innerHTML = ""
+        }
+
+
+    }
+
+
+
+</script>
+
+
+
+</body>
+</html>
+</body>
+</html>
